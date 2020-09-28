@@ -2,7 +2,7 @@
 " vee's generic keybindings "
 """""""""""""""""""""""""""""
 
-"let mapleader = " "
+let mapleader = " "
 let g:mapleader = "\<Space>"
 " You can't stop me
 cmap w!! w !sudo tee %
@@ -25,11 +25,14 @@ nnoremap <leader>wm :wa<cr>:make<cr>
 nnoremap <leader>ws :wa<cr>:so %<cr>
 " Disable highlight when <leader><cr> is pressed
 nnoremap <silent> <leader><cr> :noh<cr>
+nnoremap <silent> <leader><leader> :noh<cr>
 " fast replace current word
 ""nnoremap <a-s> :%s/\<<C-r><C-w>\>//ge<Left><Left><Left>
 nnoremap <leader>s :%s/\<<C-r><C-w>\>//ge<Left><Left><Left>
-" fast refactor. Do :args *.*pp to select .cpp and .hpp files beforehand
-nnoremap <leader>r :argdo %s/\<<C-r><C-w>\>//gce<Left><Left><Left><Left>
+" fast project refactor. Do :args *.*pp to select .cpp and .hpp files beforehand
+nnoremap <leader>R :argdo %s/\<<C-r><C-w>\>//gce<Left><Left><Left><Left>
+nnoremap <leader>r :%s/\<<C-r><C-w>\>//gce<Left><Left><Left><Left>
+vnoremap <leader>r :%s/\<<C-r><C-w>\>//gce<Left><Left><Left><Left>
 " Alternate way to save
 nnoremap <C-s> :w<CR>
 " Use control-c instead of escape
@@ -229,4 +232,19 @@ tnoremap <Esc> <C-\><C-n>
 tnoremap <a-i> <C-\><C-n>
 tnoremap <a-u> <C-\><C-n>
 tnoremap <a-o> <C-\><C-n>
-
+tnoremap <A-h> <Left>
+tnoremap <A-j> <Down>
+tnoremap <A-k> <Up>
+tnoremap <A-l> <Right>
+tnoremap <A-e> <C-\><C-n>>ea
+tnoremap <A-b> <C-\><C-n>bi
+tnoremap <A-d> <DEL>
+tnoremap <A-s> <BS>
+tnoremap <A-_> <C-\><C-n>I
+tnoremap <A-a> <C-\><C-n>A
+tnoremap <A-m> <CR>
+" in terminal mode, use c-h, c-j, c-k, c-l to change buffer event in insert mode
+tnoremap <c-h> <C-\><C-n><C-w>h
+tnoremap <c-j> <C-\><C-n><C-w>j
+tnoremap <c-k> <C-\><C-n><C-w>k
+tnoremap <c-l> <C-\><C-n><C-w>l
