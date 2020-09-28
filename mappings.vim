@@ -18,6 +18,7 @@ nnoremap <leader>N :cprev<cr>
 nnoremap <leader>pm :setlocal paste!<cr>
 " Fast saving
 nnoremap <leader>ww :w!<cr>
+nnoremap <A-w> :w<cr>
 nnoremap <leader>wa :wa!<cr>
 nnoremap <leader>wq :wq!<cr>
 " quick write and make
@@ -60,11 +61,6 @@ vnoremap > >gv
 """""""""""""""
 
 " In insert or command mode, move normally by using Ctrl
-"inoremap <C-h> <Left>
-"inoremap <C-j> <Down>
-"inoremap <C-k> <Up>
-"inoremap <C-l> <Right>
-
 inoremap <A-h> <Left>
 inoremap <A-j> <Down>
 inoremap <A-k> <Up>
@@ -81,11 +77,6 @@ inoremap <A-M> <Esc>O
 inoremap <A-u> <Esc>
 inoremap <A-i> <Esc>
 inoremap <A-o> <Esc>
-" (DOES NOT WORK) do the same for command mode
-"cnoremap <A-h> <Left>
-"cnoremap <A-j> <Down>
-"cnoremap <A-k> <Up>
-"cnoremap <A-l> <Right>
 
 """""""""""""""
 " normal mode "
@@ -118,13 +109,14 @@ nnoremap j gj
 nnoremap k gk
 vnoremap j gj
 vnoremap k gk
-nnoremap <Down> gj
-nnoremap <Up> gk
-vnoremap <Down> gj
-vnoremap <Up> gk
-inoremap <Down> <C-o>gj
-inoremap <Up> <C-o>gk
-" move faster with A-j and A-k
+"nnoremap <Down> gj
+"nnoremap <Up> gk
+"vnoremap <Down> gj
+"vnoremap <Up> gk
+"inoremap <Down> <C-o>gj
+"inoremap <Up> <C-o>gk
+
+" move faster with A-j and A-k in normal mode
 nnoremap <a-j> 10j
 nnoremap <a-k> 10k
 vnoremap <a-j> 10j
@@ -137,7 +129,6 @@ vnoremap <a-a> $
 " insert lines without entering insert mode
 nnoremap <A-o> o<Esc>k
 nnoremap <A-O> O<Esc>j
-nnoremap <A-w> :w<cr>
 
 " YANKING, CUTTING, PASTING, DELETING
 
@@ -178,11 +169,11 @@ nnoremap ze zo
 nnoremap za zc
 nnoremap zr zR
 nnoremap zm zM
+
 """""""""""
 " buffers "
 """""""""""
 
-" Close the current buffer
 nnoremap <leader>bb :buffers<cr>
 nnoremap <leader>bd :Bclose<cr>:tabclose<cr>gT
 nnoremap <leader>ba :bufdo bd<cr>
@@ -204,17 +195,17 @@ nnoremap <A-l> gt
 nnoremap <A-h> gT
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
-map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
+nnoremap <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 
 " Switch CWD to the directory of the open buffer
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
+nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Remove the Windows ^M - when the encodings gets messed up
-noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+nnoremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 
 """""""""""
-" COMMAND "
+" COMMAND MODE "
 """""""""""
 cnoremap <a-i> <C-c>
 cnoremap <a-u> <C-c>
@@ -225,6 +216,7 @@ cnoremap <A-k> <Up>
 cnoremap <A-l> <Right>
 cnoremap <A-d> <DEL>
 cnoremap <A-s> <BS>
+
 """"""""""""
 " TERMINAL "
 """"""""""""
