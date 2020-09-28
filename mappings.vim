@@ -78,6 +78,7 @@ inoremap <A-u> <Esc>
 inoremap <A-i> <Esc>
 inoremap <A-o> <Esc>
 
+
 """""""""""""""
 " normal mode "
 """""""""""""""
@@ -132,16 +133,18 @@ nnoremap <A-O> O<Esc>j
 
 " YANKING, CUTTING, PASTING, DELETING
 
+" do not buffer when deleting. Only dd and d in visual mode should buffer
 nnoremap x "_x
 nnoremap s "_s
 nnoremap ds "_dd
 nnoremap de "_de
 nnoremap d$ "_d$
 nnoremap da "_d$
-nnoremap <leader>de de
 nnoremap cd "_cc<Esc>
 nnoremap ce "_ce
 nnoremap ca "_c$
+
+nnoremap <leader>de de
 
 "go to last character of selection after yanking
 vnoremap Y y`]
