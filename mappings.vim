@@ -221,6 +221,8 @@ cnoremap <A-h> <Left>
 cnoremap <A-j> <Down>
 cnoremap <A-k> <Up>
 cnoremap <A-l> <Right>
+cnoremap <A-a> <END>
+cnoremap <A-_> <HOME>
 cnoremap <A-d> <DEL>
 cnoremap <A-s> <BS>
 
