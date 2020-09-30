@@ -6,3 +6,4 @@ function! Comment()
   endif
  endfunction
 vnoremap <silent> <space>/ :call Comment()
+au BufReadPost,BufNewFile *.c,*.cpp,*.cxx,*.h,*.hpp,*.ino setlocal commentstring=//\ %s

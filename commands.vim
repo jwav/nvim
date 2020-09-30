@@ -13,12 +13,36 @@ command! Wso w | so %
 command! Waso wa |so so %
 " Automatically save the session when leaving Vim
 "autocmd! VimLeave * mksession ~/Session.vim
-command! SaveSession mksession! ~/Session.vim
+"command! SaveSession mksession! ~/Session.vim
+command! -nargs=* SaveSession call SaveSession(<f-args>)
 " Automatically load the session when entering vim
 "autocmd! VimEnter * source ~/Session.vim
-command! LoadSession source ~/Session.vim
+"command! LoadSession source ~/Session.vim
+command! -nargs=* LoadSession call LoadSession(<f-args>)
+command! ListSessions execute('vs '.NVIM_SESSIONSDIR)
 " set directory to current file's dir
 command! Chdir cd %:p:h
+
+function SaveSession(...)
+    " arguments memo by analogy with python : ...=*args, a:0=len(args) , a:1=args[0], a:2=args[1], ...
+    let filename = g:NVIM_SESSIONSDIR.'/Session.session'
+    if a:0 >= 1
+        let filename = g:NVIM_SESSIONSDIR.'/Session_'.a:1.'.session'
+    endif
+    execute('mksession! '.filename)
+    echo 'Saved session as '.filename
+endfunction
+
+function LoadSession(...)
+    let filename = g:NVIM_SESSIONSDIR.'/Session.session'
+    if a:0 >= 1
+        let filename = g:NVIM_SESSIONSDIR.'/Session_'.a:1.'.session'
+    endif
+    execute('source '.filename)
+    echo 'Loaded session '.filename
+endfunction
+
+
 """"""""""""""""""""
 " FOREIGN COMMANDS "
 """"""""""""""""""""

@@ -9,9 +9,23 @@
 
 call plug#begin()
 
+Plug 'preservim/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'unblevable/quick-scope'
+Plug 'liuchengxu/vim-which-key'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'christianchiarulli/onedark.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'metakirby5/codi.vim'
+" remove one of those at some point;make a choice
+Plug 'preservim/nerdcommenter'
+Plug 'tpope/vim-commentary'
+
+
 "Plug 'ycm-core/YouCompleteMe'
 
-Plug 'preservim/nerdtree'
 
 "Plug 'zchee/deoplete-jedi'
 "
@@ -40,8 +54,6 @@ Plug 'preservim/nerdtree'
 
 "Plug 'ervandew/supertab'
 "Plug 'metalelf0/supertab'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 
 """"""""""""""""""""""""""
 " ChrisAtMachine plugins "
@@ -58,7 +70,6 @@ Plug 'vim-airline/vim-airline-themes'
 "" Surround
 "Plug 'tpope/vim-surround'
 "" Better Comments
-"Plug 'tpope/vim-commentary'
 "" Have the file system follow you around
 "Plug 'airblade/vim-rooter'
 "" auto set indent settings
@@ -66,7 +77,6 @@ Plug 'vim-airline/vim-airline-themes'
 "
 "" Text Navigation
 "Plug 'justinmk/vim-sneak'
-Plug 'unblevable/quick-scope'
 "" Add some color
 "Plug 'norcalli/nvim-colorizer.lua'
 "Plug 'luochen1990/rainbow'
@@ -79,15 +89,11 @@ Plug 'unblevable/quick-scope'
 "" Closetags
 "Plug 'alvan/vim-closetag'
 "" Themes
-Plug 'christianchiarulli/onedark.vim'
 "" Intellisense
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "" Status Line
 "Plug 'vim-airline/vim-airline'
 "Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 "" FZF
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 "" Git
 "Plug 'airblade/vim-gitgutter'
 "Plug 'tpope/vim-fugitive'
@@ -100,14 +106,12 @@ Plug 'junegunn/fzf.vim'
 "" Vista
 "Plug 'liuchengxu/vista.vim'
 "" See what keys do like in emacs
-Plug 'liuchengxu/vim-which-key'
 "" Zen mode
 "Plug 'junegunn/goyo.vim'
 "" Snippets
 "Plug 'honza/vim-snippets'
 "Plug 'mattn/emmet-vim'
 "" Interactive code
-Plug 'metakirby5/codi.vim'
 "" Debugging
 "Plug 'puremourning/vimspector'
 "" Better tabline
@@ -166,7 +170,6 @@ Plug 'metakirby5/codi.vim'
 " Plug 'neomake/neomake'
 " Plug 'mhinz/vim-signify'
 " Plug 'easymotion/vim-easymotion'
-" Plug 'preservim/nerdcommenter'
 " Plug 'brooth/far.vim'
 " Plug 'atishay/far.vim'
 

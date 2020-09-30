@@ -1,13 +1,14 @@
 "TODO: write an explicit coc config. See https://www.youtube.com/watch?v=OXEVhnY621M for reference
 
-autocmd BufEnter * silent! lcd %:p:h
-
 if has('win32')
     let NVIM_CONFIGDIR = '~/AppData/Local/nvim'
 else
     let NVIM_CONFIGDIR = '~/.config/nvim'
 endif
 let NVIM_CONFIGFILE = NVIM_CONFIGDIR . '/init.vim'
+let NVIM_SESSIONSDIR = NVIM_CONFIGDIR . '/sessions'
+
+autocmd BufEnter * silent! lcd %:p:h
 
 if has('unix')
     " General Settings
@@ -24,7 +25,7 @@ if has('unix')
     " Plugin Configuration
     "source ~/.config/nvim/plug-config/rnvimr.vim
     source ~/.config/nvim/plug-config/fzf.vim
-    "source ~/.config/nvim/plug-config/vim-commentary.vim
+    " source ~/.config/nvim/plug-config/vim-commentary.vim
     "source ~/.config/nvim/plug-config/rainbow.vim
     source ~/.config/nvim/plug-config/codi.vim
     source ~/.config/nvim/plug-config/quickscope.vim
@@ -64,7 +65,9 @@ elseif has('win32')
     " Plugin Configuration
     "source ~/AppData/Local/nvim/plug-config/rnvimr.vim
     source ~/AppData/Local/nvim/plug-config/fzf.vim
-    "source ~/AppData/Local/nvim/plug-config/vim-commentary.vim
+    " remove one of those at some point;make a choice
+    source ~/AppData/Local/nvim/plug-config/vim-commentary.vim
+    source ~/AppData/Local/nvim/plug-config/nerd-commenter.vim
     "source ~/AppData/Local/nvim/plug-config/rainbow.vim
     source ~/AppData/Local/nvim/plug-config/codi.vim
     source ~/AppData/Local/nvim/plug-config/quickscope.vim

@@ -138,13 +138,17 @@ nnoremap x "_x
 nnoremap s "_s
 nnoremap ds "_dd
 nnoremap de "_de
-nnoremap d$ "_d$
+"nnoremap d$ "_d$
 nnoremap da "_d$
 nnoremap cd "_cc<Esc>
 nnoremap ce "_ce
 nnoremap ca "_c$
 
+" precede by <leader> to yank with de and da (d$)
 nnoremap <leader>de de
+nnoremap <leader>da d$
+nnoremap <leader>ce ce
+nnoremap <leader>ca c$
 
 "go to last character of selection after yanking
 vnoremap Y y`]
