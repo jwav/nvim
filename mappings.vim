@@ -56,6 +56,9 @@ vnoremap <silent> # :<C-U>
 " Better tabbing
 vnoremap < <gv
 vnoremap > >gv
+
+" repeat action without having to press shift
+"nnoremap ; .
 """""""""""""""
 " insert mode "
 """""""""""""""
