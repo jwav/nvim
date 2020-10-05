@@ -23,16 +23,16 @@ if has('unix')
 
 
     " Plugin Configuration
-    "source ~/.config/nvim/plug-config/rnvimr.vim
     source ~/.config/nvim/plug-config/fzf.vim
-    " source ~/.config/nvim/plug-config/vim-commentary.vim
-    "source ~/.config/nvim/plug-config/rainbow.vim
+    source ~/.config/nvim/plug-config/vim-commentary.vim
     source ~/.config/nvim/plug-config/codi.vim
     source ~/.config/nvim/plug-config/quickscope.vim
     source ~/.config/nvim/plug-config/which-key.vim
+    source ~/.config/nvim/plug-config/coc.vim
+    "source ~/.config/nvim/plug-config/rnvimr.vim
+    "source ~/.config/nvim/plug-config/rainbow.vim
     "source ~/.config/nvim/plug-config/vim-wiki.vim
     "source ~/.config/nvim/plug-config/sneak.vim
-    source ~/.config/nvim/plug-config/coc.vim
     "source ~/.config/nvim/plug-config/goyo.vim
     "source ~/.config/nvim/plug-config/vim-rooter.vim
     "source ~/.config/nvim/plug-config/start-screen.vim
@@ -63,18 +63,17 @@ elseif has('win32')
     source ~/AppData/Local/nvim/themes/myairline.vim
 
     " Plugin Configuration
-    "source ~/AppData/Local/nvim/plug-config/rnvimr.vim
     source ~/AppData/Local/nvim/plug-config/fzf.vim
-    " remove one of those at some point;make a choice
     source ~/AppData/Local/nvim/plug-config/vim-commentary.vim
-    source ~/AppData/Local/nvim/plug-config/nerd-commenter.vim
-    "source ~/AppData/Local/nvim/plug-config/rainbow.vim
+    source ~/AppData/Local/nvim/plug-config/coc.vim
     source ~/AppData/Local/nvim/plug-config/codi.vim
     source ~/AppData/Local/nvim/plug-config/quickscope.vim
     source ~/AppData/Local/nvim/plug-config/which-key.vim
+    "source ~/AppData/Local/nvim/plug-config/nerd-commenter.vim
+    "source ~/AppData/Local/nvim/plug-config/rainbow.vim
     "source ~/AppData/Local/nvim/plug-config/vim-wiki.vim
     "source ~/AppData/Local/nvim/plug-config/sneak.vim
-    source ~/AppData/Local/nvim/plug-config/coc.vim
+    "source ~/AppData/Local/nvim/plug-config/rnvimr.vim
     "source ~/AppData/Local/nvim/plug-config/goyo.vim
     "source ~/AppData/Local/nvim/plug-config/vim-rooter.vim
     "source ~/AppData/Local/nvim/plug-config/start-screen.vim
@@ -94,7 +93,9 @@ elseif has('win32')
     "luafile ~/AppData/Local/nvim/lua/plug-colorizer.lua
 endif
 
-"
+" same thing as above, but generic (no if/else has('win32')).
+" the only problem is that `gf` doesn't work on these lines
+" TODO: write a function working like `gf` and can work with these lines
 "" General Settings
 "execute('source '.NVIM_CONFIGDIR.'/plugins.vim')
 "execute('source '.NVIM_CONFIGDIR.'/settings.vim')
