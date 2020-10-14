@@ -1,5 +1,5 @@
 """"""""""""""""""
-" VEE'S COMMANDS "
+" MY COMMANDS "
 """"""""""""""""""
 
 command! Bindings execute('e '.NVIM_CONFIGDIR.'/vee_bindings.vim')
@@ -7,6 +7,10 @@ command! Sonviminit execute('source '.NVIM_CONFIGFILE)
 command! Nviminit execute('e '.NVIM_CONFIGFILE)
 command! Vsnviminit execute('vs '.NVIM_CONFIGFILE)
 command! Spnviminit execute('sp '.NVIM_CONFIGFILE)
+
+command! FoldCpp setlocal foldmethod=syntax foldnestmax=2
+command! FoldPython setlocal foldmethod=indent foldnestmax=2
+command! FoldVim setlocal foldmethod=indent foldnestmax=1
 
 "command! Nvimcd execute('cd '.NVIM_CONFIGDIR)
 command! Wso w | so %
@@ -42,9 +46,8 @@ function LoadSession(...)
     echo 'Loaded session '.filename
 endfunction
 
-
 """"""""""""""""""""
-" FOREIGN COMMANDS "
+" GLEANED COMMANDS "
 """"""""""""""""""""
 
 " Returns true if paste mode is enabled

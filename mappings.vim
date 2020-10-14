@@ -58,6 +58,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " repeat action without having to press shift
+" TODO: removed for which reason again?
 "nnoremap ; .
 """""""""""""""
 " insert mode "
@@ -74,6 +75,9 @@ inoremap <A-d> <DEL>
 inoremap <A-s> <BS>
 inoremap <A-_> <Esc>I
 inoremap <A-a> <Esc>A
+inoremap <a-s-I> <Esc>I
+inoremap <a-s-0> <Esc>0i
+" inser new line without disrupting the current line
 inoremap <A-m> <Esc>o
 inoremap <A-M> <Esc>O
 
@@ -224,6 +228,7 @@ cnoremap <A-h> <Left>
 cnoremap <A-j> <Down>
 cnoremap <A-k> <Up>
 cnoremap <A-l> <Right>
+cnoremap <A-m> <CR>
 cnoremap <A-a> <END>
 cnoremap <A-_> <HOME>
 cnoremap <A-d> <DEL>
