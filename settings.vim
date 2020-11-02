@@ -33,7 +33,9 @@ set langmenu=en
 "au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
 
-set wildmenu " Turn on the Wild menu
+set wildmenu " WTF is this
+set incsearch " start searching before you're done typing
+
 
 
 set pastetoggle=<F3>

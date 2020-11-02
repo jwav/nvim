@@ -125,10 +125,10 @@ vnoremap k gk
 "inoremap <Up> <C-o>gk
 
 " move faster with A-j and A-k in normal mode
-nnoremap <a-j> 10j
-nnoremap <a-k> 10k
-vnoremap <a-j> 10j
-vnoremap <a-k> 10k
+nnoremap <a-j> 5j
+nnoremap <a-k> 5k
+vnoremap <a-j> 5j
+vnoremap <a-k> 5k
 
 nnoremap <a-i> 0
 nnoremap <a-a> $
@@ -178,11 +178,11 @@ nnoremap <C-l> <C-W>l
 nnoremap <A-x> :q<CR>
 
 "folding
-nnoremap zz zo
-nnoremap ze zo
-nnoremap za zc
-nnoremap zr zR
-nnoremap zm zM
+nnoremap zz za " toggle fold
+nnoremap ze zo " open fold
+nnoremap za zc " close fold
+nnoremap zr zR " open all folds
+nnoremap zm zM " close all folds
 
 """""""""""
 " buffers "
