@@ -13,7 +13,6 @@ filetype indent on
 " C indentation
 set cino=g-1 "don't indent after public/private
 set cino+=N-s " don't indent namespaces
-set tabstop=4
 setlocal foldmethod=syntax
 set foldnestmax=1
 set formatoptions-=cro " disable auto comment on new line
@@ -81,6 +80,7 @@ endif
 "set background=dark
 highlight Folded guibg=#004020 guifg=LightSkyBlue
 highlight Comment cterm=bold
+highlight Normal guibg=#0101010
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -103,14 +103,18 @@ augroup END
 
 " Use spaces instead of tabs
 set expandtab
-
-" Be smart when using tabs ;)
+" ???
 set smarttab
 
 " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
+" enforce indent size of 4 spaces for Python. 
+" default: setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=8
+" see $VIMRUNTIME/ftplugin/python.vim
 
+
+autocmd FileType python setlocal tabstop=4
 " Linebreak on 500 characters
 set lbr
 set tw=500
@@ -188,8 +192,8 @@ autocmd filetype * :call SetMyTodos()
 
 " Set extra options when running in GUI mode
 "if has("gui_running")
-"if exists('g:GuiLoaded')
-if 1
+if exists('g:GuiLoaded')
+" if 1
     " This is VIM stuff, doesn't work in Neovim
     "set guioptions-=T
     "set guioptions-=e

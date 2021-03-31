@@ -19,9 +19,11 @@ Plug 'christianchiarulli/onedark.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'metakirby5/codi.vim'
+Plug 'mhinz/vim-startify'
 " remove one of those at some point;make a choice
-Plug 'preservim/nerdcommenter'
+" Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-commentary'
+Plug 'justinmk/vim-sneak'
 
 
 "Plug 'ycm-core/YouCompleteMe'
@@ -76,7 +78,6 @@ Plug 'tpope/vim-commentary'
 "Plug 'tpope/vim-sleuth'
 "
 "" Text Navigation
-"Plug 'justinmk/vim-sneak'
 "" Add some color
 "Plug 'norcalli/nvim-colorizer.lua'
 "Plug 'luochen1990/rainbow'

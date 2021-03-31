@@ -85,6 +85,9 @@ inoremap <A-u> <Esc>
 inoremap <A-i> <Esc>
 inoremap <A-o> <Esc>
 
+inoremap <A-w> <Esc>:w<CR>a
+inoremap <A-t> `
+
 
 """""""""""""""
 " normal mode "
@@ -117,18 +120,17 @@ nnoremap j gj
 nnoremap k gk
 vnoremap j gj
 vnoremap k gk
-"nnoremap <Down> gj
-"nnoremap <Up> gk
-"vnoremap <Down> gj
-"vnoremap <Up> gk
-"inoremap <Down> <C-o>gj
-"inoremap <Up> <C-o>gk
 
 " move faster with A-j and A-k in normal mode
 nnoremap <a-j> 5j
 nnoremap <a-k> 5k
 vnoremap <a-j> 5j
 vnoremap <a-k> 5k
+
+nnoremap <a-b> 3b
+nnoremap <a-e> 3e
+vnoremap <a-b> 3b
+vnoremap <a-e> 3e
 
 nnoremap <a-i> 0
 nnoremap <a-a> $
@@ -140,7 +142,7 @@ nnoremap <A-O> O<Esc>j
 
 " YANKING, CUTTING, PASTING, DELETING
 
-" do not buffer when deleting. Only dd and d in visual mode should buffer
+" by default, never buffer when deleting. Only dd and d in visual mode should buffer
 nnoremap x "_x
 nnoremap s "_s
 nnoremap ds "_dd
@@ -157,6 +159,25 @@ nnoremap <leader>da d$
 nnoremap <leader>ce ce
 nnoremap <leader>ca c$
 
+nnoremap U <c-r>
+nnoremap x "_x
+nnoremap s "_s
+"nnoremap ds "_dd
+nnoremap de "_de
+nnoremap d$ "_d$
+nnoremap da "_d$
+nnoremap <leader>de de
+nnoremap <leader>da da
+nnoremap cd "_cc<Esc>
+nnoremap ce "_ce
+nnoremap ca "_c$
+nnoremap D "_dd
+nnoremap dx "_dd
+nnoremap dc "_dd
+nnoremap <leader>dd "_dd
+nnoremap d<space> "_dd
+
+" VISUAL MODE
 "go to last character of selection after yanking
 vnoremap Y y`]
 vnoremap x "_x
@@ -166,23 +187,30 @@ vnoremap c "_c
 " yank and paste in OS clipboard
 nnoremap <A-y> "+yy
 nnoremap <A-p> "+p
+nnoremap <A-P> "+P
 vnoremap <A-y> "+y
 vnoremap <A-p> "+p
+vnoremap <A-p> "+P
+inoremap <c-v> <esc>"+pa
 
 " Smart way to move between windows
 nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
 nnoremap <C-h> <C-W>h
 nnoremap <C-l> <C-W>l
+nnoremap H <C-W>h
+nnoremap L <C-W>l
 "closing window
 nnoremap <A-x> :q<CR>
 
 "folding
-nnoremap zz za " toggle fold
-nnoremap ze zo " open fold
-nnoremap za zc " close fold
-nnoremap zr zR " open all folds
-nnoremap zm zM " close all folds
+nnoremap zz za
+nnoremap zk zc
+nnoremap zj zo
+nnoremap ze zo
+nnoremap za zc
+nnoremap zr zR
+nnoremap zm zM
 
 """""""""""
 " buffers "
@@ -252,8 +280,9 @@ tnoremap <A-s> <BS>
 tnoremap <A-_> <C-\><C-n>I
 tnoremap <A-a> <C-\><C-n>A
 tnoremap <A-m> <CR>
-" in terminal mode, use c-h, c-j, c-k, c-l to change buffer event in insert mode
+" in terminal mode, use c-h, c-j, c-k, c-l to change buffer even in insert mode
 tnoremap <c-h> <C-\><C-n><C-w>h
 tnoremap <c-j> <C-\><C-n><C-w>j
 tnoremap <c-k> <C-\><C-n><C-w>k
 tnoremap <c-l> <C-\><C-n><C-w>l
+

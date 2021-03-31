@@ -1,3 +1,6 @@
+" https://github.com/justinmk/vim-sneak
+
+
 let g:sneak#label = 1
 
 " case insensitive sneak
@@ -22,7 +25,11 @@ let g:sneak#prompt = '🔎 '
 " map F <Plug>Sneak_F
 " map t <Plug>Sneak_t
 " map T <Plug>Sneak_T
-
+" map s s
+" nnoremap <a-s> <Plug>Sneak_s
+" vnoremap <a-s> <Plug>Sneak_s
+nmap <a-s> <Plug>Sneak_s
+vmap <a-s> <Plug>Sneak_s
 
 " Useful info
 

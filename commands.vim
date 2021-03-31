@@ -99,3 +99,56 @@ function! VisualSelection(direction, extra_filter) range
     let @/ = l:pattern
     let @" = l:saved_reg
 endfunction
+
+function! NumbersAzertyWithoutShift()
+    echo 'Switched Mode : NO SHIFT FOR NUMBERS'
+
+    nnoremap & 1
+    nnoremap é 2
+    nnoremap " 3
+    nnoremap ' 4
+    nnoremap ( 5
+    nnoremap - 6
+    nnoremap è 7
+    nnoremap _ 8
+    nnoremap ç 9
+    nnoremap à 0
+
+    " nnoremap 1 & 
+    " nnoremap 2 é 
+    nnoremap 3 " 
+    nnoremap 4 ' 
+    nnoremap 5 ( 
+    nnoremap 6 - 
+    nnoremap 7 è 
+    nnoremap 8 _ 
+    nnoremap 9 ç 
+    nnoremap 0 à 
+endfunction
+nnoremap <leader>__ :call NumbersAzertyWithoutShift()<CR>
+
+function! NumbersAzertyWithShift()
+    echo 'Switched Mode : USE SHIFT FOR NUMBERS'
+    nnoremap & &
+    nnoremap é é
+    nnoremap " "
+    nnoremap ' '
+    nnoremap ( (
+    nnoremap - -
+    nnoremap è è
+    nnoremap _ _
+    nnoremap ç ç
+    nnoremap 0 0
+
+    nnoremap 1 1
+    nnoremap 2 2
+    nnoremap 3 3
+    nnoremap 4 4
+    nnoremap 5 5
+    nnoremap 6 6
+    nnoremap 7 7
+    nnoremap 8 8
+    nnoremap 9 9
+    nnoremap 0 0
+endfunction
+nnoremap <leader>88 :call NumbersAzertyWithShift()<CR>

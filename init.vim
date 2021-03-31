@@ -57,8 +57,11 @@ elseif has('win32')
     source ~/AppData/Local/nvim/mappings.vim
     source ~/AppData/Local/nvim/settings.vim
 
-    set background=dark
     source ~/AppData/Local/nvim/themes/onedark.vim
+    set background=dark
+    highlight Normal guibg=#0101010
+    highlight Folded guibg=#004020 guifg=LightSkyBlue
+    highlight Comment cterm=bold
     highlight Normal guibg=#0101010
     source ~/AppData/Local/nvim/themes/myairline.vim
 
@@ -72,11 +75,11 @@ elseif has('win32')
     "source ~/AppData/Local/nvim/plug-config/nerd-commenter.vim
     "source ~/AppData/Local/nvim/plug-config/rainbow.vim
     "source ~/AppData/Local/nvim/plug-config/vim-wiki.vim
-    "source ~/AppData/Local/nvim/plug-config/sneak.vim
+    source ~/AppData/Local/nvim/plug-config/sneak.vim
     "source ~/AppData/Local/nvim/plug-config/rnvimr.vim
     "source ~/AppData/Local/nvim/plug-config/goyo.vim
     "source ~/AppData/Local/nvim/plug-config/vim-rooter.vim
-    "source ~/AppData/Local/nvim/plug-config/start-screen.vim
+    source ~/AppData/Local/nvim/plug-config/start-screen.vim
     "source ~/AppData/Local/nvim/plug-config/gitgutter.vim
     "source ~/AppData/Local/nvim/plug-config/closetags.vim
     "source ~/AppData/Local/nvim/plug-config/floaterm.vim
