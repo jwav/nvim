@@ -15,7 +15,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'unblevable/quick-scope'
 Plug 'liuchengxu/vim-which-key'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'christianchiarulli/onedark.vim'
+" Plug 'christianchiarulli/onedark.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'metakirby5/codi.vim'
@@ -24,6 +24,9 @@ Plug 'mhinz/vim-startify'
 " Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-commentary'
 Plug 'justinmk/vim-sneak'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
+" Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 
 
 "Plug 'ycm-core/YouCompleteMe'
@@ -135,7 +138,6 @@ Plug 'justinmk/vim-sneak'
 "" swap windows
 "plug 'wesq3/vim-windowswap'
 "" markdown preview
-"plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
 "" easily create gists
 "plug 'mattn/vim-gist'
 "plug 'mattn/webapi-vim'

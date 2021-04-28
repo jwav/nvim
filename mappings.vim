@@ -87,7 +87,12 @@ inoremap <A-o> <Esc>
 
 inoremap <A-w> <Esc>:w<CR>a
 inoremap <A-t> `
+inoremap àà <esc>
+inoremap çà <esc>
+inoremap àç <esc>
+inoremap çç <esc>
 
+inoremap § \
 
 """""""""""""""
 " normal mode "
@@ -142,40 +147,26 @@ nnoremap <A-O> O<Esc>j
 
 " YANKING, CUTTING, PASTING, DELETING
 
-" by default, never buffer when deleting. Only dd and d in visual mode should buffer
 nnoremap x "_x
 nnoremap s "_s
-nnoremap ds "_dd
-nnoremap de "_de
-"nnoremap d$ "_d$
-nnoremap da "_d$
-nnoremap cd "_cc<Esc>
-nnoremap ce "_ce
-nnoremap ca "_c$
 
-" precede by <leader> to yank with de and da (d$)
-nnoremap <leader>de de
-nnoremap <leader>da d$
-nnoremap <leader>ce ce
-nnoremap <leader>ca c$
-
-nnoremap U <c-r>
-nnoremap x "_x
-nnoremap s "_s
-"nnoremap ds "_dd
-nnoremap de "_de
-nnoremap d$ "_d$
-nnoremap da "_d$
-nnoremap <leader>de de
-nnoremap <leader>da da
-nnoremap cd "_cc<Esc>
-nnoremap ce "_ce
-nnoremap ca "_c$
 nnoremap D "_dd
-nnoremap dx "_dd
-nnoremap dc "_dd
 nnoremap <leader>dd "_dd
 nnoremap d<space> "_dd
+
+nnoremap da d$
+nnoremap <leader>da "_d$
+nnoremap de "_de
+nnoremap <leader>de "_de
+
+nnoremap cd "_cc<Esc>
+nnoremap ce "_ce
+nnoremap ca "_c$
+nnoremap cc "_cc
+nnoremap dx "_dd
+nnoremap dc "_dd
+
+nnoremap U <c-r>
 
 " VISUAL MODE
 "go to last character of selection after yanking
@@ -188,9 +179,11 @@ vnoremap c "_c
 nnoremap <A-y> "+yy
 nnoremap <A-p> "+p
 nnoremap <A-P> "+P
+
 vnoremap <A-y> "+y
 vnoremap <A-p> "+p
-vnoremap <A-p> "+P
+vnoremap <A-P> "+P
+
 inoremap <c-v> <esc>"+pa
 
 " Smart way to move between windows
@@ -202,6 +195,8 @@ nnoremap H <C-W>h
 nnoremap L <C-W>l
 "closing window
 nnoremap <A-x> :q<CR>
+nnoremap <leader>qq :q<cr>
+nnoremap <leader>qa :qa!<cr>
 
 "folding
 nnoremap zz za

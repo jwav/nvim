@@ -2,7 +2,9 @@
 " MY COMMANDS "
 """"""""""""""""""
 
-command! Bindings execute('e '.NVIM_CONFIGDIR.'/vee_bindings.vim')
+command! Mappings execute('e '.NVIM_CONFIGDIR.'/mappings.vim')
+command! VsMappings execute('vs '.NVIM_CONFIGDIR.'/mappings.vim')
+command! SpMappings execute('sp '.NVIM_CONFIGDIR.'/mappings.vim')
 command! Sonviminit execute('source '.NVIM_CONFIGFILE)
 command! Nviminit execute('e '.NVIM_CONFIGFILE)
 command! Vsnviminit execute('vs '.NVIM_CONFIGFILE)

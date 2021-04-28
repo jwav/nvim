@@ -48,7 +48,7 @@ if has('unix')
     "source ~/.config/nvim/plug-config/bracey.vim
     "source ~/.config/nvim/plug-config/asynctask.vim
     "source ~/.config/nvim/plug-config/window-swap.vim
-    "source ~/.config/nvim/plug-config/markdown-preview.vim
+    " source ~/.config/nvim/plug-config/markdown-preview.vim
     "luafile ~/.config/nvim/lua/plug-colorizer.lua
 elseif has('win32')
     " General Settings
@@ -57,7 +57,8 @@ elseif has('win32')
     source ~/AppData/Local/nvim/mappings.vim
     source ~/AppData/Local/nvim/settings.vim
 
-    source ~/AppData/Local/nvim/themes/onedark.vim
+    " source ~/AppData/Local/nvim/themes/onedark.vim
+    colorscheme industry
     set background=dark
     highlight Normal guibg=#0101010
     highlight Folded guibg=#004020 guifg=LightSkyBlue
@@ -92,7 +93,7 @@ elseif has('win32')
     "source ~/AppData/Local/nvim/plug-config/bracey.vim
     "source ~/AppData/Local/nvim/plug-config/asynctask.vim
     "source ~/AppData/Local/nvim/plug-config/window-swap.vim
-    "source ~/AppData/Local/nvim/plug-config/markdown-preview.vim
+    source ~/AppData/Local/nvim/plug-config/markdown-preview.vim
     "luafile ~/AppData/Local/nvim/lua/plug-colorizer.lua
 endif
 

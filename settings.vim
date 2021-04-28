@@ -4,8 +4,10 @@ if has('unix')
     let g:python3_host_prog = '/usr/bin/python3'
     let g:python_host_prog = '/usr/bin/python'
 elseif has('win32')
-    let g:python3_host_prog = 'python3' " '~\AppData\Local\Microsoft\WindowsApps\python3.exe'
-    let g:python_host_prog = '~\AppData\Local\Microsoft\WindowsApps\python.exe'
+    " let g:python3_host_prog = 'python3' " '~\AppData\Local\Microsoft\WindowsApps\python3.exe'
+    " let g:python_host_prog = '~\AppData\Local\Microsoft\WindowsApps\python.exe'
+    let g:python3_host_prog = 'C:\Users\jwavresky\scoop\shims\python3.exe'
+    let g:python_host_prog = 'C:\Users\jwavresky\scoop\shims\python.exe'
 endif
 " Enable filetype plugins
 filetype plugin on
