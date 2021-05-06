@@ -15,6 +15,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'unblevable/quick-scope'
 Plug 'liuchengxu/vim-which-key'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " Plug 'christianchiarulli/onedark.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -27,6 +28,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
 " Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'easymotion/vim-easymotion'
 
 
 "Plug 'ycm-core/YouCompleteMe'
@@ -172,7 +174,6 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 " Making stuff
 " Plug 'neomake/neomake'
 " Plug 'mhinz/vim-signify'
-" Plug 'easymotion/vim-easymotion'
 " Plug 'brooth/far.vim'
 " Plug 'atishay/far.vim'
 

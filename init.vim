@@ -95,6 +95,7 @@ elseif has('win32')
     "source ~/AppData/Local/nvim/plug-config/window-swap.vim
     source ~/AppData/Local/nvim/plug-config/markdown-preview.vim
     "luafile ~/AppData/Local/nvim/lua/plug-colorizer.lua
+    source ~/AppData/Local/nvim/plug-config/easymotion.vim
 endif
 
 " same thing as above, but generic (no if/else has('win32')).

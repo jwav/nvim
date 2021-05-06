@@ -3,9 +3,11 @@
     "python.linting.flake8Enabled": false,
     "python.linting.enabled": false,
     "_python.pythonPath": "/usr/bin/python3",
-    "python.pythonPath": "~/AppData/Local/Microsoft/WindowsApps/python3",
+    "__python.pythonPath": "~/AppData/Local/Microsoft/WindowsApps/python3",
+    "python.pythonPath": "~/scoop/shims/python",
 
     "_comment": "set clangd.enabled if it starts acting up",
     "clangd.enabled": false,
-    "clangd.path": "C:\\Users\\jwavresky\\AppData\\Local\\coc\\extensions\\coc-clangd-data\\install\\10.0.0\\clangd_10.0.0\\bin\\clangd.exe"
+    "_clangd.path": "C:\\Users\\jwavresky\\AppData\\Local\\coc\\extensions\\coc-clangd-data\\install\\10.0.0\\clangd_10.0.0\\bin\\clangd.exe",
+    "clangd.path": "~/scoop/shims/clangd"
 }

@@ -240,6 +240,8 @@ nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 " Remove the Windows ^M - when the encodings gets messed up
 nnoremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
+nnoremap <leader>ii >>
+nnoremap <leader>I <<
 
 """""""""""
 " COMMAND MODE "
@@ -256,6 +258,8 @@ cnoremap <A-a> <END>
 cnoremap <A-_> <HOME>
 cnoremap <A-d> <DEL>
 cnoremap <A-s> <BS>
+cnoremap <a-b> <c-Left>
+cnoremap <a-e> <c-Right>
 
 """"""""""""
 " TERMINAL "
