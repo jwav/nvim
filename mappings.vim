@@ -18,6 +18,9 @@ nnoremap <leader>N :cprev<cr>
 nnoremap <leader>pm :setlocal paste!<cr>
 " Fast saving
 nnoremap <leader>ww :w!<cr>
+nnoremap <leader>we :w!<cr>
+nnoremap W :w!<cr>
+nnoremap Q :q<cr>
 nnoremap <A-w> :w<cr>
 nnoremap <leader>wa :wa!<cr>
 nnoremap <leader>wq :wq!<cr>
@@ -131,6 +134,12 @@ nnoremap <a-j> 5j
 nnoremap <a-k> 5k
 vnoremap <a-j> 5j
 vnoremap <a-k> 5k
+nnoremap <silent> <PageDown> 10j
+nnoremap <silent> <PageUp> 10k
+vnoremap <silent> <PageDown> 10j
+vnoremap <silent> <PageUp> 10k
+inoremap <silent> <PageDown> <Esc>10<Down>i
+inoremap <silent> <PageUp> <Esc>10<Up>i
 
 nnoremap <a-b> 3b
 nnoremap <a-e> 3e
@@ -144,6 +153,8 @@ vnoremap <a-a> $
 " insert lines without entering insert mode
 nnoremap <A-o> o<Esc>k
 nnoremap <A-O> O<Esc>j
+nnoremap <leader>o o<Esc>k
+nnoremap <leader>O O<Esc>j
 
 " YANKING, CUTTING, PASTING, DELETING
 
@@ -153,6 +164,7 @@ nnoremap s "_s
 nnoremap D "_dd
 nnoremap <leader>dd "_dd
 nnoremap d<space> "_dd
+nnoremap d<backspace> "_dd
 
 nnoremap da d$
 nnoremap <leader>da "_d$
@@ -211,6 +223,8 @@ nnoremap zm zM
 " buffers "
 """""""""""
 
+" FZF buffers
+map <leader>bf :Buffers<CR>
 nnoremap <leader>bb :buffers<cr>
 nnoremap <leader>bd :Bclose<cr>:tabclose<cr>gT
 nnoremap <leader>ba :bufdo bd<cr>
@@ -228,6 +242,8 @@ nnoremap <leader>tm :tabmove +1<cr>
 nnoremap <leader>tM :tabmove -1<cr>
 "nnoremap <leader>t<leader> :tabnext 
 nnoremap gr gT
+nnoremap gl gt
+nnoremap gh gT
 nnoremap <A-l> gt
 nnoremap <A-h> gT
 " Opens a new tab with the current buffer's path
