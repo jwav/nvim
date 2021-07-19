@@ -35,7 +35,7 @@ if has('unix')
     "source ~/.config/nvim/plug-config/sneak.vim
     "source ~/.config/nvim/plug-config/goyo.vim
     "source ~/.config/nvim/plug-config/vim-rooter.vim
-    "source ~/.config/nvim/plug-config/start-screen.vim
+    source ~/.config/nvim/plug-config/start-screen.vim
     " source ~/.config/nvim/plug-config/gitgutter.vim
     "source ~/.config/nvim/plug-config/closetags.vim
     "source ~/.config/nvim/plug-config/floaterm.vim
