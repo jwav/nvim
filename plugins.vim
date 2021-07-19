@@ -30,6 +30,8 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
 " Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-fugitive'
+Plug 'dracula/vim'
 
 
 "Plug 'ycm-core/YouCompleteMe'
@@ -103,7 +105,6 @@ Plug 'easymotion/vim-easymotion'
 "" FZF
 "" Git
 "Plug 'airblade/vim-gitgutter'
-"Plug 'tpope/vim-fugitive'
 "Plug 'tpope/vim-rhubarb'
 "Plug 'junegunn/gv.vim'
 "" Terminal

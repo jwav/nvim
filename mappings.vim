@@ -56,7 +56,7 @@ vnoremap <silent> # :<C-U>
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gVzv:call setreg('"', old_reg, old_regtype)<CR>
 
-" Better tabbing
+" Better indenting in visual mode
 vnoremap < <gv
 vnoremap > >gv
 
@@ -90,12 +90,17 @@ inoremap <A-o> <Esc>
 
 inoremap <A-w> <Esc>:w<CR>a
 inoremap <A-t> `
-inoremap àà <esc>
-inoremap çà <esc>
-inoremap àç <esc>
-inoremap çç <esc>
+" inoremap àà <esc>
+" inoremap çà <esc>
+" inoremap àç <esc>
+" inoremap çç <esc>
 
-inoremap § \
+" inoremap § \
+" vim-commentary additional mappings. 'gcc' ain't that practical
+nmap <leader>cc <Plug>CommentaryLine
+nmap <leader>c <Plug>Commentary
+xmap <leader>c <Plug>Commentary
+omap <leader>c <Plug>Commentary
 
 """""""""""""""
 " normal mode "
@@ -230,6 +235,9 @@ nnoremap <leader>bd :Bclose<cr>:tabclose<cr>gT
 nnoremap <leader>ba :bufdo bd<cr>
 nnoremap <leader>l :bnext<cr>
 nnoremap <leader>h :bprevious<cr>
+nnoremap gp <c-o>
+nnoremap gn <c-i>
+
 
 """"""""
 " tabs "

@@ -19,7 +19,7 @@ if has('unix')
 
     "colorscheme industry
     set background=dark
-    source ~/.config/nvim/themes/onedark.vim
+    " source ~/.config/nvim/themes/onedark.vim
 
 
     " Plugin Configuration
@@ -36,7 +36,7 @@ if has('unix')
     "source ~/.config/nvim/plug-config/goyo.vim
     "source ~/.config/nvim/plug-config/vim-rooter.vim
     "source ~/.config/nvim/plug-config/start-screen.vim
-    "source ~/.config/nvim/plug-config/gitgutter.vim
+    " source ~/.config/nvim/plug-config/gitgutter.vim
     "source ~/.config/nvim/plug-config/closetags.vim
     "source ~/.config/nvim/plug-config/floaterm.vim
     "source ~/.config/nvim/plug-config/vista.vim
