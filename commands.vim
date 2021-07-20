@@ -9,6 +9,8 @@ command! Sonviminit execute('source '.NVIM_CONFIGFILE)
 command! Nviminit execute('e '.NVIM_CONFIGFILE)
 command! Vsnviminit execute('vs '.NVIM_CONFIGFILE)
 command! Spnviminit execute('sp '.NVIM_CONFIGFILE)
+command! Sterm execute('sp | ter')
+command! Vterm execute('vs | ter')
 
 command! FoldCpp setlocal foldmethod=syntax foldnestmax=2
 command! FoldPython setlocal foldmethod=indent foldnestmax=2
